@@ -1,0 +1,167 @@
+.game {
+	width: 100%;
+	height: 100%;
+	min-width: 1200px;
+	min-height: 400px;
+	background-color: #eee;
+}
+.game__libra {
+	background-color: #e0e0e0;
+	height: 80%;
+	position: relative;
+}
+.game__device-left, .game__device-right {
+	position: absolute;
+	width: 40%;
+	height: 100px;
+	left: 0px;
+	right: auto;
+	bottom: 0px;
+	padding: 0 2%;
+	box-sizing: border-box;
+}
+.game__device-right {
+	left: auto;
+	right: 0px;
+}
+.game__device-left:after, .game__device-right:after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	width: 40px;
+	height: 100%;
+	background-color: #444;
+	position: relative;
+}
+.game__device-center {
+	background-color: #8fbfe0;
+	margin: 0 auto;
+	width: 20%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 2%;
+}
+.game__bowl-left, .game__bowl-right {
+	background-color: #c791d9;
+	height: 20px;
+	margin-top: -20px;
+	border-radius: 5px;
+	position: relative;
+}
+.game__bowl-left-drop, .game__bowl-right-drop {
+	position: absolute;
+	height: 100px;
+	width: 100%;
+	left: 0px;
+	bottom: 100%;
+}
+.game__scale, .game__scale-bg-wrap {
+	width: 100%;
+	padding-top: 50%;
+	position: relative;
+}
+.game__scale:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin: -5% 0 0 -5%;
+	width: 10%;
+	padding-top: 10%;
+	background-color: #8fbfe0;
+	border-radius: 50%;
+}
+.game__scale-bg-wrap {
+	overflow: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.game__scale-bg-wrap:before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -7px;
+	border-style: solid;
+	border-top-width: 15px;
+	border-right-width: 7px;
+	border-bottom-width: 7px;
+	border-left-width: 7px;
+	border-color: transparent;
+	border-top-color: rgba(133, 118, 182, 0.2);
+	z-index: 1;
+}
+.game__scale-bg-wrap:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -6px;
+	border-style: solid;
+	border-top-width: 14px;
+	border-right-width: 6px;
+	border-bottom-width: 6px;
+	border-left-width: 6px;
+	border-color: transparent;
+	border-top-color: #8fbfe0;
+	z-index: 1;
+}
+.game__scale-bg {
+	width: 100%;
+	position: absolute;
+	border-radius: 50%;
+	background-color: #fff;
+	top: 0px;
+	left: 0px;
+	box-shadow: 0px 0px 2px 2px rgba(133, 118, 182, 0.8) inset;
+}
+.game__scale-bg:before {
+	content: '';
+	display: block;
+	width: 100%;
+	padding-top: 100%;
+}
+.game__scale-arrow {
+	width: 8px;
+	height: 60%;
+	background-color: #ff0000;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -4px;
+	transform-origin: bottom;
+}
+.game__scale-arrow:after {
+	content: '';
+	position: absolute;
+	bottom: 100%;
+	left: -4px;
+	box-sizing: border-box;
+	border-style: solid;
+	border-top-width: 8px;
+	border-right-width: 8px;
+	border-bottom-width: 18px;
+	border-left-width: 8px;
+	border-color: transparent;
+	border-bottom-color: #ff0000;
+}
+.game__bags-panel {
+	background-color: #3980a1;
+	height: 20%;
+	position: relative;
+}
+.game__bag {
+	display: block;
+	position: absolute;	
+}
+.game__victory {
+	text-align: center;
+	margin-top: 140px;
+	display: none;
+}
+.game__victory-massage {
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+}
