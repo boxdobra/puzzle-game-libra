@@ -361,7 +361,8 @@ window.game = (function(){
 			angleScale,
 			delta,
 			sign,
-			countBags = 0,
+			countBagsLeft = 0,
+			countBagsRight = 0,
 			bowlHeightDefault = 100,
 			bowlHeight,
 			animateTime,
@@ -371,15 +372,15 @@ window.game = (function(){
 		
 		for(var i in aBagsOnBowlLeft){
 			weightBowlLeft += aBagsOnBowlLeft[i].weight;
-			countBags++;
+			countBagsLeft++;
 		}
 		for(var i in aBagsOnBowlRight){
 			weightBowlRight += aBagsOnBowlRight[i].weight;
-			countBags++;
+			countBagsRight++;
 		}
 		
 		//победа?
-		if(countBags == options.bagsCountOnBowl*2 && weightBowlLeft == weightBowlRight){
+		if(countBagsLeft == options.bagsCountOnBowl && countBagsLeft == countBagsRight && weightBowlLeft == weightBowlRight){
 			isVictory = true;
 		}
 		
